@@ -1,56 +1,20 @@
-import s from './Footer.module.scss';
-import { AiFillGithub } from 'react-icons/ai';
-import {
-  FaLinkedinIn,
-  FaInstagram
-  
-} from 'react-icons/fa';
+import React from "react";
+import "./Footer.css";
+import Wave from "../../img/wave.png";
+import Insta from "@iconscout/react-unicons/icons/uil-instagram";
+import Facebook from "@iconscout/react-unicons/icons/uil-facebook";
+import Gitub from "@iconscout/react-unicons/icons/uil-github";
 
 const Footer = () => {
-  let date = new Date();
-  let year = date.getFullYear();
-
   return (
-    <div className={s.footer}>
-      <div className={s.container}>
-        <div className={s.copyright}>
-          <h3>Designed and Developed by Reha</h3>
-        </div>
-
-        <div className={s.copyright}>
-          <h3>Copyright © {year} Reha</h3>
-        </div>
-
-        <div className={s.body}>
-          <ul className={s.socialIcons}>
-            <li>
-              <a
-                href="https://github.com/Rehasree"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <AiFillGithub />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/ray_ha_2704"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaInstagram />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/rayha2704/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaLinkedinIn />
-              </a>
-            </li>
-          </ul>
+    <div className="footer">
+      <img src={Wave} alt="" style={{ width: "100%" }} />
+      <div className="f-content">
+        {/* <span>Zainkeepscode@gmail.com</span> */}
+        <div className="f-icons">
+          <Insta color="white" size={"3rem"} />
+          <Facebook color="white" size={"3rem"} />
+          <Gitub color="white" size={"3rem"} />
         </div>
       </div>
     </div>
